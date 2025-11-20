@@ -8,8 +8,9 @@ const server = http.createServer((req, res) => {
     const risk = evaluateRisk(2, 10); // demo
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
-      message: 'Hola DevSecOps 👋',
-      riskLevel: risk
+      message: 'Hola DevSecOps 👋 - Taller en vivo',
+      riskLevel: risk,
+      timestamp: new Date().toISOString()
     }));
   } else {
     res.writeHead(404);
